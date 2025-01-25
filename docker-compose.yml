@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: mysql:9.1
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-local}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-local}
+      MYSQL_USER: ${MYSQL_USER:-local}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-local}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:
+    driver: local
