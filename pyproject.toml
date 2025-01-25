@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "poc-flask-database-seeder"
+version = "0.1.0"
+description = "POC to validate same database seed strategies"
+authors = ["Pedro Dalvy <pedrodalvy@outlook.com>"]
+readme = "README.md"
+
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+flask = "^3.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
