@@ -3,10 +3,10 @@ from datetime import datetime
 from sqlalchemy import DateTime, func, ForeignKey
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
-from app.database.models.base import Base
+from app.database.models.base import db
 
 
-class Showtime(Base):
+class Showtime(db.Model):
 
     __tablename__ = 'showtimes'
 

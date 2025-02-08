@@ -3,10 +3,10 @@ from datetime import datetime
 from sqlalchemy import String, DateTime, func
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
-from app.database.models.base import Base
+from app.database.models.base import db
 
 
-class Theater(Base):
+class Theater(db.Model):
 
     __tablename__ = 'theaters'
 

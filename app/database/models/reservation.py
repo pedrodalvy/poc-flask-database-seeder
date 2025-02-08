@@ -3,11 +3,11 @@ from datetime import datetime
 from sqlalchemy import DateTime, func, Enum, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.database.models.base import Base
+from app.database.models.base import db
 from app.enums.reservation_status import ReservationStatus
 
 
-class Reservation(Base):
+class Reservation(db.Model):
 
     __tablename__ = 'reservations'
 

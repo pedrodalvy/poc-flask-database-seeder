@@ -4,10 +4,10 @@ from sqlalchemy import String, DECIMAL, DateTime, func, ForeignKey
 from sqlalchemy.dialects.mysql import SMALLINT
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.database.models.base import Base
+from app.database.models.base import db
 
 
-class Seat(Base):
+class Seat(db.Model):
 
     __tablename__ = 'seats'
 

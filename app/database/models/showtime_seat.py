@@ -1,11 +1,11 @@
 from sqlalchemy import Enum, DECIMAL, ForeignKey
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
-from app.database.models.base import Base
+from app.database.models.base import db
 from app.enums.showtime_seat_status import ShowtimeSeatStatus
 
 
-class ShowtimeSeat(Base):
+class ShowtimeSeat(db.Model):
 
     __tablename__ = 'showtime_seats'
 

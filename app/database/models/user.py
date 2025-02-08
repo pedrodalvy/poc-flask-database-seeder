@@ -3,11 +3,11 @@ from datetime import datetime
 from sqlalchemy import String, Enum, DateTime, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.database.models.base import Base
+from app.database.models.base import db
 from app.enums.user_roles import UserRoles
 
 
-class User(Base):
+class User(db.Model):
 
     __tablename__ = 'users'
 
