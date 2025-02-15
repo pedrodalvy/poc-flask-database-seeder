@@ -12,7 +12,7 @@ class ShowtimeSeat(db.Model):
     id: Mapped[int] = mapped_column(primary_key=True)
     showtime_id: Mapped[int] = mapped_column(ForeignKey('showtimes.id'))
     seat_id: Mapped[int] = mapped_column(ForeignKey('seats.id'))
-    reservation_id: Mapped[int] = mapped_column(ForeignKey('reservations.id'))
+    reservation_id: Mapped[int] = mapped_column(ForeignKey('reservations.id'), nullable=True)
     status: Mapped[ShowtimeSeatStatus] = mapped_column(Enum(ShowtimeSeatStatus), nullable=False)
     price: Mapped[float] = mapped_column(DECIMAL(10, 2), nullable=False)
 
